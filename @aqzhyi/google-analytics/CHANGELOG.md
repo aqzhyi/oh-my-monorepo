@@ -1,5 +1,11 @@
 # @aqzhyi/google-analytics
 
+## 0.3.2
+
+### Patch Changes
+
+- refactor(@aqzhyi/google-analytics): README, style formatting, package infomation
+
 ## 0.3.1
 
 ### Patch Changes
