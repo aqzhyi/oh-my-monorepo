@@ -4,7 +4,7 @@
     "enabled": false
   },
   "linter": {
-    "enabled": true,
+    "enabled": true, // Configure to `true`, replacing ESLint as the primary linter.
     "rules": {
       "recommended": true,
       "style": {
@@ -25,9 +25,13 @@
   "javascript": {
     "globals": ["Astro"],
     "formatter": {
-      "enabled": true,
+      // Set to `false` until biomejs can perfectly replace Prettier.
+      // I particularly rely on prettier-plugin-jsdoc,
+      // and I am still unclear about the rodemap for block comment in biomejs.
+      "enabled": false,
       "indentStyle": "space",
-      "semicolons": "asNeeded"
+      "semicolons": "asNeeded",
+      "quoteStyle": "single"
     }
   },
   "json": {

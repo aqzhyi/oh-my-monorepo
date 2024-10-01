@@ -1,0 +1,42 @@
+# Astro.build
+.astro
+
+# Vercel build
+.turbo
+.vercel
+
+# Next.js
+.next/
+out/
+dist
+build
+
+# runtime configs
+**/.nvmrc
+**/.npmrc
+
+# obviously no need
+**/*.bmp
+**/*.jpeg
+**/*.jpg
+**/*.map
+**/*.png
+**/*.webp
+**/.gitignore
+**/node_modules
+**/pnpm-lock.yaml
+
+# that is bundles copied from charting_library
+**/charting*library/**/charting*library.js
+**/charting*library/**/charting*library.*.js
+**/charting*library/**/changelog.md
+**/charting*library/datafeeds/udf/lib
+
+# bundles
+**/out
+**/bundles
+**/dist
+**/*.scss.d.ts
+**/*.swagger.*
+**/.next
+**/.turbo
