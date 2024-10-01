@@ -8,45 +8,47 @@
 pnpm i @aqzhyi/google-analytics
 ```
 
-## `<GoogleAnalytics />` (astro-component)
+## Usage (Astro)
 
-> Insert the GTM (Google Tag Manager) script into the Astro Layout and configure your Google Analytics ID, for example: `'G-G90JYXXXXX'`.
+### `<GoogleAnalytics />`
 
-###### pages/_layout/BasicLayout.astro
+> Insert the Google Tag Manager (GTM) script into the HTML using the Google Analytics ID you have configured (e.g., `'G-G90JYXXXXX'`).
 
-```astro
----
-import { GoogleAnalytics } from "@aqzhyi/google-analytics"
----
+1. `pages/_layout/BasicLayout.astro`
 
-<!doctype html>
-<html>
-  <head>
-    <GoogleAnalytics id='G-G90JYXXXXX' />
-  </head>
-  <body>
-    <slot />
-  </body>
-</html>
-```
+   ```astro
+   ---
+   import { GoogleAnalytics } from '@aqzhyi/google-analytics'
+   ---
 
-###### pages/index.astro
+   <!doctype html>
+   <html>
+     <head>
+       <GoogleAnalytics id='G-G90JYXXXXX' />
+     </head>
+     <body>
+       <slot />
+     </body>
+   </html>
+   ```
 
-```
----
-import BasicLayout from "./_layout/BasicLayout.astro"
----
+1. `pages/index.astro`
 
-<BasicLayout>
-  Page 1
-</BasicLayout>
-```
+   ```
+   ---
+   import BasicLayout from "./_layout/BasicLayout.astro"
+   ---
 
-###### Preview
+   <BasicLayout>
+     Page 1
+   </BasicLayout>
+   ```
+
+> Preview
 
 ![](https://raw.githubusercontent.com/Aqzhyi/mono/refs/heads/main/%40aqzhyi/google-analytics/public/works.png)
 
-## `<GoogleAnalytics debug />` (astro-component)
+### `<GoogleAnalytics debug />`
 
 ```astro
 <GoogleAnalytics
@@ -54,5 +56,7 @@ import BasicLayout from "./_layout/BasicLayout.astro"
   debug={true}
 />
 ```
+
+> Preview
 
 ![](https://raw.githubusercontent.com/Aqzhyi/mono/refs/heads/main/%40aqzhyi/google-analytics/public/debug-if-no-input.png)

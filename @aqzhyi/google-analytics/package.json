@@ -5,14 +5,9 @@
   "description": "Google Analytics (GA4) library",
   "type": "module",
   "exports": {
-    ".": [
-      "./src/components/index.astro",
-      "./src/index.ts"
-    ]
+    ".": ["./src/components/index.astro", "./src/index.ts"]
   },
-  "files": [
-    "src"
-  ],
+  "files": ["src"],
   "scripts": {
     "dev": "turbo watch web css lint tsc",
     "web": "astro dev",
@@ -30,8 +25,7 @@
   "private": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/Aqzhyi/oh-my-monorepo",
-    "directory": "@aqzhyi/google-analytics"
+    "url": "https://github.com/Aqzhyi/oh-my-monorepo/tree/main/%40aqzhyi/google-analytics"
   },
   "keywords": [
     "analytics event",
