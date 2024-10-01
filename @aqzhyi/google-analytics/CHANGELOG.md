@@ -1,5 +1,11 @@
 # @aqzhyi/google-analytics
 
+## 0.3.1
+
+### Patch Changes
+
+- fix(@aqzhyi/google-analytics): "files" field in package.json
+
 ## 0.3.0
 
 ### Minor Changes
