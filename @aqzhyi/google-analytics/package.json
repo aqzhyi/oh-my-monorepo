@@ -1,0 +1,49 @@
+{
+  "license": "MIT",
+  "version": "0.1.0",
+  "name": "@aqzhyi/google-analytics",
+  "description": "Google Analytics (GA4) library",
+  "type": "module",
+  "exports": {
+    ".": ["./src/components/index.astro", "./src/index.ts"]
+  },
+  "scripts": {
+    "dev": "turbo watch web css lint tsc",
+    "web": "astro dev",
+    "lint": "biome lint ./src",
+    "tsc": "tsc --noEmit --preserveWatchOutput",
+    "build": "astro check --minimumSeverity error && astro build"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.3",
+    "@astrojs/ts-plugin": "^1.10.2",
+    "astro": "^4.15.9",
+    "modern-normalize": "^3.0.1",
+    "typescript": "^5.6.2"
+  },
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aqzhyi/mono/@aqzhyi/google-analytics"
+  },
+  "keywords": [
+    "analytics event",
+    "analytics-event",
+    "analytics",
+    "astro-component",
+    "astro",
+    "event track",
+    "event-track",
+    "ga4",
+    "google analytics",
+    "google tag manager",
+    "google tag",
+    "google-analytics",
+    "google-tag-manager",
+    "google-tag",
+    "gtag",
+    "gtm",
+    "pageview",
+    "withastro"
+  ]
+}

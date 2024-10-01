@@ -1,0 +1,15 @@
+{
+  "extends": "astro/tsconfigs/strictest",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "paths": {
+      "~/*": ["./src/*"]
+    },
+    "plugins": [{ "name": "@astrojs/ts-plugin" }],
+    "removeComments": false
+  },
+  "include": ["src", "public", "*.config.*"],
+  "exclude": ["node_modules"]
+}

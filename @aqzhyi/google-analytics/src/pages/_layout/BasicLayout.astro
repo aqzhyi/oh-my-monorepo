@@ -1,0 +1,31 @@
+---
+import { GoogleAnalytics } from "@aqzhyi/google-analytics"
+import "modern-normalize/modern-normalize.css"
+---
+
+<!doctype html>
+<html id='__html' >
+  <head>
+    <meta charset='UTF-8' />
+    <meta
+      name='description'
+      content='Google Analytics (GA4) library'
+    />
+
+    <title>Google Analytics (GA4) library</title>
+
+    <GoogleAnalytics id='G-G90JYXXXXX' />
+  </head>
+  <body id='__body'>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  #__html {
+    height: 100%;
+  }
+  #__body {
+    height: 100%;
+  }
+</style>

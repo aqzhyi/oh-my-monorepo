@@ -1,0 +1,58 @@
+---
+import { Debug } from 'astro:components'
+
+export interface Props {
+  /** e.g: `'G-G90JYXXXXX'` */
+  id: string
+  /** defaults: false */
+  debug?: boolean
+}
+
+const { id, debug } = Astro.props
+---
+
+<Fragment>
+  <!-- Google tag (gtag.js) -->
+  <script
+    is:inline
+    async
+    src={`https://www.googletagmanager.com/gtag/js?id=${id}`}
+  ></script>
+  <script is:inline define:vars={{ id: id }}>
+    const hasId = !!id
+
+    /** @ts-ignore */
+    window.dataLayer = window.dataLayer || []
+
+    function gtag() {
+      /** @ts-ignore */
+      dataLayer.push(arguments)
+    }
+
+    /** @ts-ignore */
+    gtag('js', new Date())
+
+    /** @ts-ignore */
+    gtag('config', id)
+
+    const bg = hasId ? 'rgba(0, 89, 0, 0.971)' : 'rgb(188, 86, 163)'
+
+    console.log(
+      `%c[@traders/google-analytics#<GA4/>] Google Analytics 4 is loaded with id: ${hasId ? id : '__NO_ID_INPUT__'}`,
+      `font-size: 14px; padding: 8px; color: white; background-color: ${bg}; border: 1px solid black;`,
+    )
+  </script>
+
+  {
+    debug && !id && typeof id !== 'string' && (
+      <Debug
+        GoogleAnalytics={{
+          expect: 'id',
+          toBe: 'G-G90JYXXXXX',
+          received: '',
+          example: `<GoogleAnalytics id='G-G90JYXXXXX' />`,
+        }}
+      />
+    )
+  }
+</Fragment>
