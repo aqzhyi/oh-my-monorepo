@@ -44,7 +44,7 @@ import BasicLayout from "./_layout/BasicLayout.astro"
 
 ###### Preview
 
-![public/works2.png](public/works.png)
+![](https://raw.githubusercontent.com/Aqzhyi/mono/refs/heads/main/%40aqzhyi/google-analytics/public/works.png)
 
 ## `<GoogleAnalytics debug />` (astro-component)
 
@@ -55,4 +55,4 @@ import BasicLayout from "./_layout/BasicLayout.astro"
 />
 ```
 
-![public/debug-if-no-input2.png](public/debug-if-no-input.png)
+![](https://raw.githubusercontent.com/Aqzhyi/mono/refs/heads/main/%40aqzhyi/google-analytics/public/debug-if-no-input.png)
