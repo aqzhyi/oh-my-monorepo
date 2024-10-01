@@ -8,7 +8,11 @@
       "persistent": true
     },
 
-    "web": {},
+    /** the scripts.web command is used to persistently start a server on localhost, such as run `astro dev` */
+    "web": {
+      "cache": false,
+      "persistent": true
+    },
 
     "css": {},
 
