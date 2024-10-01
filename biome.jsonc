@@ -1,0 +1,74 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.2/schema.json",
+  "organizeImports": {
+    "enabled": false
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "style": {
+        "all": true,
+        "noDefaultExport": "off",
+        "useFilenamingConvention": {
+          "level": "error",
+          "options": {
+            "filenameCases": ["camelCase", "PascalCase"]
+          }
+        }
+      },
+      "a11y": {
+        "all": false
+      }
+    }
+  },
+  "javascript": {
+    "globals": ["Astro"],
+    "formatter": {
+      "enabled": true,
+      "indentStyle": "space",
+      "semicolons": "asNeeded"
+    }
+  },
+  "json": {
+    "formatter": {
+      "enabled": true,
+      "indentStyle": "space"
+    }
+  },
+  "files": {
+    "ignore": [
+      "// 💬 other",
+      "**/.nvmrc",
+      "**/.npmrc",
+
+      "// 💬 obviously no need",
+      "**/*.bmp",
+      "**/*.jpeg",
+      "**/*.jpg",
+      "**/*.map",
+      "**/*.png",
+      "**/*.webp",
+      "**/.gitignore",
+      "**/node_modules",
+      "**/pnpm-lock.yaml",
+
+      "// 💬 that is bundles copied from charting_library",
+      "**/charting*library/**/charting*library.js",
+      "**/charting*library/**/charting*library.*.js",
+      "**/charting*library/**/changelog.md",
+      "**/charting*library/datafeeds/udf/lib",
+
+      "// 💬 bundles",
+      "**/out",
+      "**/bundles",
+      "**/dist",
+      "**/*.scss.d.ts",
+      "**/*.swagger.*",
+      "**/.astro",
+      "**/.next",
+      "**/.turbo",
+      "**/.vercel"
+    ]
+  }
+}

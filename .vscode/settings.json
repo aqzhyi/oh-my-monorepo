@@ -1,0 +1,22 @@
+{
+  //
+  //// Basic
+  "cSpell.words": ["withastro", "aqzhyi"],
+
+  //
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+  //
+  //// Replace ESLint and Prettier with Biomejs.
+  "prettier.enable": false,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "biomejs.biome",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
+
+  //
+  //// others
+  "todo-tree.filtering.excludeGlobs": ["**/node_modules/**", "**/bundles/**"]
+}

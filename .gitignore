@@ -1,3 +1,16 @@
+# Astro.build
+.astro
+
+# Vercel build
+.turbo
+.vercel
+
+# Next.js
+.next/
+out/
+dist
+build
+
 # Logs
 logs
 *.log
