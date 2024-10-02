@@ -1,0 +1,30 @@
+---
+import { MantineHead } from '@aqzhyi/astro-react-mantine'
+---
+
+<!doctype html>
+<html id='__html'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta
+      name='description'
+      content='React Mantine UI components for Astro'
+    />
+
+    <title>DEMO @aqzhyi/astro-react-mantine</title>
+
+    <MantineHead />
+  </head>
+  <body id='__body'>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  #__html {
+    height: 100%;
+  }
+  #__body {
+    height: 100%;
+  }
+</style>

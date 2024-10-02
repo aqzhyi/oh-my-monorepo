@@ -1,0 +1,51 @@
+{
+  "license": "MIT",
+  "version": "0.0.1",
+  "name": "@aqzhyi/astro-react-mantine",
+  "description": "Although it may slightly conflict with Astro's original intent, you remain dedicated to integrating mantine UI within Astro.",
+  "type": "module",
+  "exports": {
+    ".": ["./src/libs/astro-components/index.astro"]
+  },
+  "files": ["src"],
+  "scripts": {
+    "dev": "turbo watch web css lint tsc -F={*/astro-react-mantine}",
+    "web": "astro dev",
+    "lint": "biome lint ./src",
+    "tsc": "tsc --noEmit --preserveWatchOutput",
+    "build": "astro check --minimumSeverity error && astro build"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.3",
+    "@astrojs/react": "^3.6.2",
+    "@astrojs/ts-plugin": "^1.10.2",
+    "@mantine/core": "^7.13.1",
+    "@mantine/hooks": "^7.13.1",
+    "@types/react": "^18.3.10",
+    "@types/react-dom": "^18.3.0",
+    "astro": "^4.15.9",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.6.2"
+  },
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aqzhyi/oh-my-monorepo",
+    "directory": "@aqzhyi/astro-react-mantine"
+  },
+  "keywords": [
+    "astro-component",
+    "astro",
+    "components",
+    "design",
+    "frontend",
+    "react",
+    "mantine",
+    "mantine UI",
+    "ui kit",
+    "ui-kit",
+    "ui",
+    "withastro"
+  ]
+}
