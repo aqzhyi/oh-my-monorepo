@@ -14,7 +14,7 @@
     "src"
   ],
   "scripts": {
-    "dev": "turbo watch web css lint tsc",
+    "dev": "turbo watch web css lint tsc -F={*/google-analytics}",
     "web": "astro dev",
     "lint": "biome lint ./src",
     "tsc": "tsc --noEmit --preserveWatchOutput",
