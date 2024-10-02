@@ -7,6 +7,9 @@
     "enabled": true, // Configure to `true`, replacing ESLint as the primary linter.
     "rules": {
       "recommended": true,
+      "complexity": {
+        "noUselessFragments": "off" // Set to `off`, because I tend to write code explicitly.
+      },
       "style": {
         "all": true,
         "noDefaultExport": "off",
