@@ -30,7 +30,8 @@
   "private": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/Aqzhyi/oh-my-monorepo/tree/main/%40aqzhyi/google-analytics"
+    "url": "https://github.com/Aqzhyi/oh-my-monorepo",
+    "directory": "@aqzhyi/google-analytics"
   },
   "keywords": [
     "analytics event",
