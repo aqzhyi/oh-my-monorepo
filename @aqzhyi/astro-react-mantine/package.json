@@ -1,13 +1,17 @@
 {
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "name": "@aqzhyi/astro-react-mantine",
   "description": "Although it may slightly conflict with Astro's original intent, you remain dedicated to integrating mantine UI within Astro.",
   "type": "module",
   "exports": {
-    ".": ["./src/libs/astro-components/index.astro"]
+    ".": [
+      "./src/libs/astro-components/index.astro"
+    ]
   },
-  "files": ["src"],
+  "files": [
+    "src"
+  ],
   "scripts": {
     "dev": "turbo watch web css lint tsc -F={*/astro-react-mantine}",
     "web": "astro dev",
