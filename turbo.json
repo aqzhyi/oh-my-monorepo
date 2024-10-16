@@ -1,26 +1,57 @@
 {
-  "$schema": "https://turbo.build/schema.json",
+  "$schema": "https://turbo.build/schema.v2.json",
   "globalDependencies": ["**/.env.*local"],
   "ui": "stream",
   "tasks": {
-    "dev": {
-      "cache": false,
-      "persistent": true
-    },
-
-    /** the scripts.web command is used to persistently start a server on localhost, such as run `astro dev` */
-    "web": {
-      "cache": false,
-      "persistent": true
-    },
-
+    //
+    // for example, in css script, you can generate d.ts files based on the sass files
+    // you are currently developing, providing a type-safe experience.
     "css": {},
 
-    "lint": {},
+    "tsc": {
+      "dependsOn": [
+        //
+        // for example, type-check must be deferred until the type-safe generation of css is finalized
+        // to ensure that the validation process can thoroughly encompass the css.
+        "^css"
+      ]
+    },
 
-    "tsc": {},
+    "lint": { "cache": false },
+
+    "test": {},
 
     "build": {
+      "dependsOn": [
+        //
+        // certain packages may need to be built first to ensure that the correct versions
+        // are available for use in the app project.
+        // you now have the build order you would expect, building dependencies before dependents.
+        "^build",
+        //
+        "^lint",
+        "^css",
+        "^tsc",
+        "^test"
+      ],
+      //
+      // the outputs should only include the outDir within each respective project;
+      // the cache directories generated within each project should not be included.
+      "outputs": [".next/**", "dist/**", "!.next/cache/**", "!.vercel"]
+    },
+
+    "start": {
+      "dependsOn": ["build"],
+      "cache": false,
+      "persistent": true
+    },
+
+    //
+    // in the traditional workflow of web project development, it is generally necessary to
+    // initiate multiple tasks simultaneously, such as: tsc, lint, css, http-server, etc.
+    "dev": {
+      "cache": false,
+      "persistent": true,
       "dependsOn": ["css", "lint", "tsc"]
     }
   }

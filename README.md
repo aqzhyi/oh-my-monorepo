@@ -1,19 +1,29 @@
-## development
+> [!IMPORTANT]
+>
+> # Development
+>
+> - `turbo` as monorepo
+> - `pnpm` as workspaces
+> - `biome` as linter
+> - `prettier` as formatter
+> - `changeset` as angular commits for changelogs, and packages bump
 
-- `turbo` as monorepo
-- `pnpm` as workspaces
-- `biome` as linter
-- `prettier` as formatter
-- `changeset` as angular commits for changelogs, and packages bump
+---
 
-### `@aqzhyi/google-analytics`
+> [!NOTE]
+>
+> npm:`@aqzhyi/google-analytics`
 
 ```sh
-turbo run dev -F={*/google-analytics}
+turbo watch dev -F=@aqzhyi/google-analytics
 ```
 
-### `@aqzhyi/astro-react-mantine`
+---
+
+> [!NOTE]
+>
+> npm:`@aqzhyi/astro-react-mantine`
 
 ```sh
-turbo run dev -F={*/astro-react-mantine}
+turbo watch dev -F=@aqzhyi/astro-react-mantine
 ```

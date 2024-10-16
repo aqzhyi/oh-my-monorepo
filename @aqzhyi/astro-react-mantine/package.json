@@ -5,18 +5,13 @@
   "description": "Although it may slightly conflict with Astro's original intent, you remain dedicated to integrating mantine UI within Astro.",
   "type": "module",
   "exports": {
-    ".": [
-      "./src/libs/astro-components/index.astro"
-    ]
+    ".": ["./src/libs/astro-components/index.astro"]
   },
-  "files": [
-    "src"
-  ],
+  "files": ["src"],
   "scripts": {
-    "dev": "turbo watch web css lint tsc -F={*/astro-react-mantine}",
-    "web": "astro dev",
+    "dev": "astro dev",
     "lint": "biome lint ./src",
-    "tsc": "tsc --noEmit --preserveWatchOutput",
+    "tsc": "astro check",
     "build": "astro check --minimumSeverity error && astro build"
   },
   "devDependencies": {
