@@ -1,13 +1,18 @@
 {
   "license": "MIT",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "name": "@aqzhyi/google-analytics",
   "description": "Google Analytics (GA4) library",
   "type": "module",
   "exports": {
-    ".": ["./src/components/index.astro", "./src/index.ts"]
+    ".": [
+      "./src/components/index.astro",
+      "./src/index.ts"
+    ]
   },
-  "files": ["src"],
+  "files": [
+    "src"
+  ],
   "scripts": {
     "dev": "astro dev",
     "lint": "biome lint ./src",

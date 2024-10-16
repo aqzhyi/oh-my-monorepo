@@ -1,5 +1,11 @@
 # @aqzhyi/google-analytics
 
+## 0.3.4
+
+### Patch Changes
+
+- refactor: Improved practices for package.json in turbo.build
+
 ## 0.3.3
 
 ### Patch Changes
