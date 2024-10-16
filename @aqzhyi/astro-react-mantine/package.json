@@ -5,7 +5,7 @@
   "description": "Although it may slightly conflict with Astro's original intent, you remain dedicated to integrating mantine UI within Astro.",
   "type": "module",
   "exports": {
-    ".": ["./src/libs/astro-components/index.astro"]
+    ".": "./src/index.ts"
   },
   "files": ["src"],
   "scripts": {
@@ -13,6 +13,12 @@
     "lint": "biome lint ./src",
     "tsc": "astro check",
     "build": "astro check --minimumSeverity error && astro build"
+  },
+  "peerDependencies": {
+    "@mantine/core": "^7.13.1",
+    "astro": "^4.15.9",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.3",

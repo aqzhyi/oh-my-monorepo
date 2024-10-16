@@ -1,0 +1,63 @@
+---
+export interface Props {
+  title: string
+  description?: string
+}
+
+const { title, description } = Astro.props
+---
+
+<!doctype html>
+<html
+  lang='zh-hant'
+  id='__html'
+>
+  <head>
+    <meta charset='UTF-8' />
+    <meta
+      name='description'
+      content={`${description}`}
+    />
+    <meta
+      name='viewport'
+      content='width=device-width'
+    />
+    <link
+      rel='icon'
+      type='image/svg+xml'
+      href='/favicon.svg'
+    />
+    <meta
+      name='generator'
+      content={Astro.generator}
+    />
+
+    <link
+      rel='stylesheet'
+      href='https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css'
+      integrity='sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=='
+      crossorigin='anonymous'
+      referrerpolicy='no-referrer'
+    />
+    <title>{title}</title>
+
+    <slot name='head' />
+  </head>
+  <body id='__body'>
+    <div id='__content'>
+      <slot />
+    </div>
+  </body>
+</html>
+
+<style is:global>
+  #__html {
+    height: 100%;
+  }
+  #__body {
+    height: 100%;
+  }
+  #__content {
+    height: 100%;
+  }
+</style>

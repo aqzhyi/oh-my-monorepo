@@ -1,6 +1,6 @@
 import { Button, Notification, SimpleGrid, TextInput } from '@mantine/core'
 import { useState } from 'react'
-import { createAstroComponent } from '~/libs/utils'
+import { createAstroComponent } from '../../src/react/createAstroComponent'
 import css from './index.Content.module.css'
 
 export const Content = createAstroComponent({
