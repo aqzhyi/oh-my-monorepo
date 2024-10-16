@@ -1,5 +1,11 @@
 # @aqzhyi/astro-react-mantine
 
+## 0.1.1
+
+### Patch Changes
+
+- fix(@aqzhyi/google-analytics): simplified directory structure and optimized package export paths
+
 ## 0.1.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @aqzhyi/google-analytics
 
+## 0.3.5
+
+### Patch Changes
+
+- fix(@aqzhyi/google-analytics): simplified directory structure and optimized package export paths
+
 ## 0.3.4
 
 ### Patch Changes

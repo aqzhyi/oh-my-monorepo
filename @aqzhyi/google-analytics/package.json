@@ -1,6 +1,6 @@
 {
   "license": "MIT",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "name": "@aqzhyi/google-analytics",
   "description": "Google Analytics (GA4) library for Astro.build",
   "type": "module",

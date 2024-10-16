@@ -1,6 +1,6 @@
 {
   "license": "MIT",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "name": "@aqzhyi/astro-react-mantine",
   "description": "Although it may slightly conflict with Astro's original intent, you remain dedicated to integrating mantine UI within Astro.",
   "type": "module",
