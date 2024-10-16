@@ -4,12 +4,8 @@
     "baseUrl": ".",
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "paths": {
-      "~/*": ["./src/*"]
-    },
-    "plugins": [{ "name": "@astrojs/ts-plugin" }],
     "removeComments": false
   },
-  "include": ["src", "public", "*.config.*"],
+  "include": ["demo", "src", "public", "*.config.*"],
   "exclude": ["node_modules"]
 }

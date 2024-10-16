@@ -2,13 +2,10 @@
   "license": "MIT",
   "version": "0.3.4",
   "name": "@aqzhyi/google-analytics",
-  "description": "Google Analytics (GA4) library",
+  "description": "Google Analytics (GA4) library for Astro.build",
   "type": "module",
   "exports": {
-    ".": [
-      "./src/components/index.astro",
-      "./src/index.ts"
-    ]
+    ".": "./src/index.ts"
   },
   "files": [
     "src"
@@ -19,12 +16,14 @@
     "tsc": "astro check",
     "build": "astro check --minimumSeverity error && astro build"
   },
+  "peerDependencies": {
+    "astro": "^4.15.9"
+  },
   "devDependencies": {
-    "@astrojs/check": "^0.9.3",
-    "@astrojs/ts-plugin": "^1.10.2",
-    "astro": "^4.15.9",
+    "@astrojs/check": "^0.9.4",
+    "astro": "^4.16.5",
     "modern-normalize": "^3.0.1",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.3"
   },
   "private": false,
   "repository": {

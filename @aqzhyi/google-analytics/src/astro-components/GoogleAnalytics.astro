@@ -44,7 +44,7 @@ const { id, debug } = Astro.props
   </script>
 
   {
-    debug && !id && typeof id !== 'string' && (
+    debug && (
       <Debug
         GoogleAnalytics={{
           expect: 'id',
