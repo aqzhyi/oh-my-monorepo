@@ -37,7 +37,14 @@
       //
       // the outputs should only include the outDir within each respective project;
       // the cache directories generated within each project should not be included.
-      "outputs": [".next/**", "dist/**", "!.next/cache/**", "!.vercel"]
+      "outputs": [
+        ".next/**",
+        "dist",
+        "out",
+        "public",
+        "!.next/cache/**",
+        "!.vercel"
+      ]
     },
 
     "start": {
