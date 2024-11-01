@@ -61,6 +61,7 @@
       "**/pnpm-lock.yaml",
 
       "// 💬 that is bundles copied from charting_library",
+      "**/charting*library-v*/bundles",
       "**/charting*library/**/charting*library.js",
       "**/charting*library/**/charting*library.*.js",
       "**/charting*library/**/changelog.md",
