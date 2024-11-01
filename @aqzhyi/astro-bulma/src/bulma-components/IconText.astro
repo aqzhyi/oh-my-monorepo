@@ -1,0 +1,24 @@
+---
+export interface Props {
+  /**
+   * @example
+   *   //
+   *   // Usage
+   *   ;<FaIconText>
+   *     <i
+   *       slot='icon'
+   *       class='fa-solid fa-circle-dollar-to-slot'
+   *     />
+   *     <span slot='text'>Donate</span>
+   *   </FaIconText>
+   */
+  children: astroHTML.JSX.Element[]
+}
+---
+
+<span class='icon-text'>
+  <span class='icon'>
+    <slot name='icon' />
+  </span>
+  <slot name='text' />
+</span>
