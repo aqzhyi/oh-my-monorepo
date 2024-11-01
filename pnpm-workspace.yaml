@@ -1,5 +1,6 @@
 packages:
   - '@app/*'
   - '@aqzhyi/*'
+  - '_private/*'
   - '!**/test/**'
   - '!**/mock/**'
