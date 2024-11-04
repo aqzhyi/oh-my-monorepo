@@ -27,3 +27,56 @@
     }
   }
   ```
+
+### in the package.json file, if the "exports" field is a conditional reference, then
+
+- always make sure that "types" is listed first (entry-point for TypeScript resolution - must occur first!)
+- always make sure that "default" is listed at the end (as generic fallback that always matches)
+
+> see https://www.typescriptlang.org/docs/handbook/modules/reference.html#example-explicit-types-condition
+
+> [!TIP]
+>
+> also see https://github.com/bluwy/publint
+>
+> or you can run `npx publint` to check
+
+👍 this is good
+
+```json
+{
+  "name": "pkg",
+  "exports": {
+    "./subpath": {
+      "import": {
+        "types": "./types/subpath/index.d.mts",
+        "default": "./es/subpath/index.mjs"
+      },
+      "require": {
+        "types": "./types/subpath/index.d.cts",
+        "default": "./cjs/subpath/index.cjs"
+      }
+    }
+  }
+}
+```
+
+⛔ this bad
+
+```json
+{
+  "name": "pkg",
+  "exports": {
+    "./subpath": {
+      "import": {
+        "default": "./es/subpath/index.mjs",
+        "types": "./types/subpath/index.d.mts"
+      },
+      "require": {
+        "default": "./cjs/subpath/index.cjs",
+        "types": "./types/subpath/index.d.cts"
+      }
+    }
+  }
+}
+```
